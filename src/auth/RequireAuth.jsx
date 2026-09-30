@@ -1,0 +1,23 @@
+import { Navigate, Outlet, useLocation } from "react-router-dom";
+import useAuthStore from "../store/authStore";
+
+function RequireAuth() {
+  const user = useAuthStore((state) => state.user);
+  const location = useLocation();
+
+  if (!user) {
+    return (
+      <Navigate
+        to="/login"
+        state={{
+          from: location.pathname + location.search
+        }}
+        replace
+      />
+    );
+  }
+
+  return <Outlet />;
+}
+
+export default RequireAuth;
