@@ -83,7 +83,8 @@ function AdminLogin() {
           >
             Login
           </button>
-
+<p>username: admin</p>
+<p>password: admin123</p>
         </form>
 
       </div>
