@@ -48,9 +48,7 @@ function DishCard({ dish }) {
 
       <div className="dish-content">
 
-        <span className="dish-category">
-          {dish.category}
-        </span>
+       
 
         <h3>{dish.name}</h3>
 
